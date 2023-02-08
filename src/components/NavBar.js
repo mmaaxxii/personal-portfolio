@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg'
 import navIcon2 from '../assets/img/nav-icon2.svg'
 import navIcon3 from '../assets/img/nav-icon3.svg'
 
 
+
+
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState("home");
-    const [scrolled, seScrolled] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         const onScroll = () => {
             if (window.screenY > 50) {
-                seScrolled(true);
+                setScrolled(true);
+                console.log('1' + window.screenY);
             } else {
-                seScrolled(false);
+                setScrolled(false);
+                console.log(window.screenY);
             }
         };
 
