@@ -28,7 +28,7 @@ export const NavBar = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    const onUpdateActiveLink=(value) => {
+    const onUpdateActiveLink = (value) => {
         setActiveLink(value)
     }
 
@@ -80,7 +80,7 @@ export const NavBar = () => {
                                 <img src={navIcon2} alt="" />
                             </a>
                             <a href="#">
-                                <img src={navIcon3 } alt="" />
+                                <img src={navIcon3} alt="" />
                             </a>
                         </div>
                         <button className="vvd" onClick={() => console.log("connnet")}>
