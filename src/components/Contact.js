@@ -1,3 +1,4 @@
+import { response } from "express";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 
@@ -13,14 +14,34 @@ export const Contact = () => {
 
 
     const [formDetails, setFormDetails] = useState(formInitialDetails)
-    const [buttonText, setbuttonText] = useState("Send")
+    const [buttonText, setButtonText] = useState("Send")
     const [status, setStatus] = useState({})
     const onFormUpdate = (category, value) => {
         setFormDetails({ ...formDetails, [category]: value })
     }
-    const handleSubmit = () => {
-
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setButtonText("Sending...")
+        let reponse = await fetch("http://localhost:5000/contact", { 
+            method: "POST",
+            headers: {
+                "Content-Type": "Application/json;charset=urf-8", 
+            },
+            body: JSON.stringify(formDetails),
+        }) 
+        setButtonText("Send")
+        let result = response.json()
+        setFormDetails(formInitialDetails)
+        if(result.code === 200){
+            setStatus({ success: true, message: "Message sent successfully"})
+        }else {
+            setStatus({ success: false,  message: "Something went wrong, please try again later"})
+        }
     }
+
+    
+
+
 
     return (
   
