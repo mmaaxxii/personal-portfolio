@@ -37,9 +37,9 @@ export const Contact = () => {
         }else {
             setStatus({ success: false,  message: "Something went wrong, please try again later"})
         }
-    }
+    } 
 
-    
+
 
 
 
