@@ -6,7 +6,7 @@ import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-
+import React from 'react'
 
 export function Projects() {
     const projects = [
