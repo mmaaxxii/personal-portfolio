@@ -52,7 +52,7 @@ export function Projects() {
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <h2>Projects</h2>
                                     <p>
-                                        Lorem ipsum is simply dummy text of the printing and typesetting
+                                        Lorem hgfhgf ipsum is simply dummy text of the printing and typesetting
                                         industry. Lorem
                                     </p>
                                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
