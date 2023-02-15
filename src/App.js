@@ -20,6 +20,8 @@ function App() {
       <Projects/>
       <Contact/>
       <Footer/>
+      
+    {/*<Contact/>*/}
     </div>
   );
 }

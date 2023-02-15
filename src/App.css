@@ -367,6 +367,14 @@ nav.navbar .navbar-toggle[aria-expanded='true'] .navbar-toggler-icon {
   z-index: -4;
 }
 
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+
 
 
 /************ Projects Css ************/

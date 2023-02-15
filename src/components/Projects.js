@@ -90,7 +90,7 @@ export function Projects() {
                     </Col>
                 </Row>
             </Container>
-            <img className="blackground-image-right" src={colorSharp2}></img>
+            <img className="background-image-right" src={colorSharp2}></img>
         </section>
     );
 }
